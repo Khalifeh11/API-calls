@@ -39,9 +39,9 @@ const nationality = document.querySelector(".nationality");
 document.querySelector('.name-form').addEventListener('submit', function (e) {
     //prevent the normal submission of the form
     e.preventDefault()
+    addGender();
     addAge();
     addNationality();
-    addGender();
     return nameInput.value;    
 });
 
@@ -50,7 +50,7 @@ async function addGender() {
     const response = await fetch(`https://api.genderize.io?name=${nameInput.value}`);
     const data = await response.json();
     let uppercaseGender = data.gender.toUpperCase();
-    console.log(uppercaseGender)
+    console.log(data.gender)
     if (!data.gender){
         gender.textContent = "Is that a real name?";
     }else{
