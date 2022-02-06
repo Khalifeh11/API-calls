@@ -1,0 +1,28 @@
+#random-img{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 15rem;;
+    border-radius: 8px  ;
+}
+
+.title{
+    text-align: center;
+    font-size: 4rem;
+}
+
+form{
+    text-align: center;
+    font-size: large;
+}
+.information{
+    text-align: center;
+}
+.flag-icon{
+    margin: 1rem;
+    border-radius: 12px;
+}
+
+
+
+
