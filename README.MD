@@ -1,5 +1,3 @@
-#The website aims to predict the gender, age and the nationality of a given name. 
-
 #Everytime the website is loaded, it shows a random dog image from an api call. 
 
 #The user has to input his/her name on the website and click on a button
