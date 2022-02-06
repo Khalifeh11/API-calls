@@ -95,7 +95,7 @@ async function addNationality() {
         for (let i = 0; i < data.country.length; i++){
             const flagIcon = new Image(60,60);
             flagIcon.classList.add("flag-icon")
-            flagIcon.src = `images/flags/${data.country[i]["country_id"]}.svg`
+            flagIcon.src = `./images/flags/${data.country[i]["country_id"]}.svg`
             flagDiv.appendChild(flagIcon);
         }
         if (!flagDiv.firstChild){
