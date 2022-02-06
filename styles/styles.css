@@ -31,6 +31,8 @@ body{
 
 input{
     min-width: 20%;
+    height: 1.5rem;
+    border-radius: 8px;
 }
 
 .title{
@@ -50,16 +52,22 @@ form{
 label{
     font-family: 'Lobster', cursive;
     font-weight: bold;
-    font-size: larger;
+    font-size:x-large;
 }
 
 #btn{
     font-family: 'Lobster', cursive;
-    text-transform:inherit;
     width: 5rem;
+    height: 1.5rem;
     border-radius: 8px;
-    cursor: pointer;
+    cursor: pointer; 
 }
+#btn:hover{
+    background: white;
+    color: #e8f0fe
+    border: thin solid #e8f0fe;
+}
+
 
 
 .horizontal-line{
