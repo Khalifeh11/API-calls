@@ -1,16 +1,19 @@
-
-
+body{
+    zoom: 70%;
+}
 .title{
     text-align: center;
     font-family: 'Lobster', cursive;
+    text-shadow: 5px 0 #462f2f;
 }
 
 .card {
-    margin: 5rem auto 10rem auto ;
+    width: max-content;
+    box-sizing: border-box;
+    margin: auto;
     border: 1px solid black;
     border-radius: 12px;
-    width: max-content;
-    background-color: antiquewhite;
+    background-color: rgb(224, 213, 213);
 }
 
 .card-content{
@@ -77,6 +80,9 @@ figcaption{
     margin: 1rem;
 }
 
-@media max
-
+@media only screen and (max-width: 600px) {
+    body {
+        zoom: 100%;
+    }
+  }
 
