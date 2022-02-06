@@ -93,9 +93,11 @@ async function addNationality() {
             flagDiv.removeChild(flagDiv.firstChild)
         }
         for (let i = 0; i < data.country.length; i++){
+            let country_id = data.country[i]["country_id"];
+            let lowerCaseId = country_id.toLowerCase();
             const flagIcon = new Image(60,60);
             flagIcon.classList.add("flag-icon")
-            flagIcon.src = `./images/flags/${data.country[i]["country_id"]}.svg`
+            flagIcon.src = `./images/flags/${lowerCaseId}.svg`
             flagDiv.appendChild(flagIcon);
         }
         if (!flagDiv.firstChild){
