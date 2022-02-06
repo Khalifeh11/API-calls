@@ -105,7 +105,13 @@ figcaption{
 }
 
 @media only screen and (max-width: 600px) {
-    
-
+    body{
+        zoom: 100%;
   }
+
+    .card {
+    margin: 10rem auto;
+  } 
+
+}
 
