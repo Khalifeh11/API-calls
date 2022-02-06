@@ -13,7 +13,7 @@ body{
     margin: auto;
     border: 1px solid black;
     border-radius: 12px;
-    background-color: rgb(224, 213, 213);
+    /* background-color: rgb(224, 213, 213); */
 }
 
 .card-content{
@@ -29,43 +29,61 @@ body{
     border-radius: 8px;
 }
 
-input{
-    min-width: 20%;
-    height: 1.5rem;
-    border-radius: 8px;
-}
 
-.title{
+.title-text{
     text-align: center;
     font-size: 4rem;
 }
-
-form{
+.name-form{
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    font-size: large;
-}
-.information{
-    text-align: center;
-    font-family: 'Lobster', cursive;
 }
 
-label{
+.name-form > label {
+    margin-bottom: 1rem;
     font-family: 'Lobster', cursive;
     font-weight: bold;
     font-size:x-large;
+    text-shadow: 1px 0 #ffffff;
 }
 
-#btn{
-    font-family: 'Lobster', cursive;
-    width: 5rem;
+
+.name-form > input{
     height: 1.5rem;
+    width: 50%;
+    border-radius: 8px;
+    padding: 5px;
+    border:0;
+    box-shadow:0 0 15px 4px rgb(134, 126, 126);
+    align-self: center;
+}
+
+.name-form > button{
+    align-self: center;
+    margin: 1rem;
+    font-size: larger;
+    padding: 0.1rem 2rem;
+    font-family: 'Source Serif 4', sans-serif;
     border-radius: 8px;
     cursor: pointer; 
 }
-#btn:hover{
+
+.name-form > button:hover{
     background: white;
-    color: #e8f0fe
+    color: #000000;
     border: thin solid #e8f0fe;
+}
+
+
+::placeholder {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+.information{
+    text-align: center;
+    font-family: 'Source Serif 4', sans-serif;
 }
 
 
@@ -82,15 +100,12 @@ figcaption{
     text-align:center;
 }
 
-
-
 .flag-div{
     margin: 1rem;
 }
 
 @media only screen and (max-width: 600px) {
-    body {
-        zoom: 100%;
-    }
+    
+
   }
 

@@ -1,18 +1,3 @@
-// fetch("https://dog.ceo/api/breeds/image/random")
-//     .then(function(response){
-//         return response.json();
-//     })
-//     .then(function(data){
-//         console.log(data)
-//         img.src= data.message;
-//     })
-
-// The api for getting the gender is: https://api.genderize.io?name=caline
-// The api for getting the age is: https://api.agify.io/?name=joe
-// The api for getting the nationality: https://api.nationalize.io/?name=mohamad
-// The api for getting the dog images: https://dog.ceo/api/breeds/image/random
-
-
 const img = document.querySelector('img');
 async function getRandomImg ()  {
     try{
@@ -49,6 +34,7 @@ async function addGender() {
     try{
     const response = await fetch(`https://api.genderize.io?name=${nameInput.value}`);
     const data = await response.json();
+    console.log(data)
     let uppercaseGender = data.gender.toUpperCase();
     console.log(data.gender)
     if (!data.gender){
@@ -70,6 +56,7 @@ async function addAge() {
     try{
         const response = await fetch(`https://api.agify.io/?name=${nameInput.value}`);
         const data = await response.json();
+        console.log(data)
         if (!data.age){
             age.textContent = "No age found";
         }else{
@@ -97,6 +84,7 @@ async function addNationality() {
     try{
         const response = await fetch(`https://api.nationalize.io/?name=${nameInput.value}`);
         const data = await response.json();
+        console.log(data)
         while(flagDiv.firstChild){
             flagDiv.removeChild(flagDiv.firstChild)
         }
