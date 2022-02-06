@@ -59,7 +59,7 @@ async function addGender() {
     return data
     }catch(error){
         console.log("ERROR: ", error)
-        throw "ERROR"
+        throw "Gender ERROR"
     }
     
 }
@@ -79,10 +79,16 @@ async function addAge() {
     }
     catch(error){
         console.log("ERROR: ", error)
-        throw "ERROR2"
+        throw "Age ERROR"
     }
    
 }
+
+const countryName = new Intl.DisplayNames(
+    ['en'], {type: 'region'}
+  );
+
+
 
 
 
@@ -96,11 +102,16 @@ async function addNationality() {
         }
         for (let i = 0; i < data.country.length; i++){
             let country_id = data.country[i]["country_id"];
+            let caption = document.createElement("FIGCAPTION");
+            let flagName = document.createTextNode(countryName.of(country_id));
+            caption.appendChild(flagName)
             let lowerCaseId = country_id.toLowerCase();
             const flagIcon = new Image(60,60);
-            flagIcon.classList.add("flag-icon")
-            flagIcon.src = `./images/flags/${lowerCaseId}.svg`
+            flagIcon.classList.add("flag-icon");
+            flagIcon.src = `./images/flags/${lowerCaseId}.svg`;
             flagDiv.appendChild(flagIcon);
+            flagDiv.appendChild(caption);
+
         }
         if (!flagDiv.firstChild){
             flagDiv.textContent = "Citizen of the world"
@@ -108,7 +119,7 @@ async function addNationality() {
         return data
     }catch(error){
         console.log("ERROR: ", error)
-        throw "ERROR"
+        throw "Nationality ERROR"
     }
    
 }

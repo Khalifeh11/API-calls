@@ -1,15 +1,12 @@
-body{
-    width: 100%;
-    height: 100%;
-    overflow:auto
- }
+
 
 .title{
     text-align: center;
     font-family: 'Lobster', cursive;
 }
+
 .card {
-    margin: 10rem auto 10rem auto ;
+    margin: 5rem auto 10rem auto ;
     border: 1px solid black;
     border-radius: 12px;
     width: max-content;
@@ -17,7 +14,7 @@ body{
 }
 
 .card-content{
-    padding: 2rem;
+    padding: 1rem;
 }
 
 #random-img{
@@ -55,10 +52,10 @@ label{
 
 #btn{
     font-family: 'Lobster', cursive;
-    text-transform: capitalize;
+    text-transform:inherit;
     width: 5rem;
     border-radius: 8px;
-    
+    cursor: pointer;
 }
 
 
@@ -70,11 +67,16 @@ label{
     margin: 1rem;
     border-radius: 12px;
 }
+figcaption{
+    text-align:center;
+}
+
+
 
 .flag-div{
     margin: 1rem;
 }
 
-
+@media max
 
 
