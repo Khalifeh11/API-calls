@@ -39,17 +39,21 @@ const nationality = document.querySelector(".nationality");
 document.querySelector('.name-form').addEventListener('submit', function (e) {
     //prevent the normal submission of the form
     e.preventDefault()
-    getAge();
+    addAge();
     addNationality();
-    getGender();
+    addGender();
     return nameInput.value;    
 });
 
-async function getGender() {
+async function addGender() {
     try{
     const response = await fetch(`https://api.genderize.io?name=${nameInput.value}`);
     const data = await response.json();
-    gender.textContent = "gender " + `${data.gender}` 
+    if (!data.gender){
+        gender.textContent = "Is that a real name?";
+    }else{
+        gender.textContent = "Gender: " + `${data.gender}` 
+    }
     return data
     }catch(error){
         console.log("ERROR: ", error)
@@ -60,11 +64,15 @@ async function getGender() {
 
 
 
-async function getAge() {
+async function addAge() {
     try{
         const response = await fetch(`https://api.agify.io/?name=${nameInput.value}`);
         const data = await response.json();
-        age.textContent = "age " + `${data.age}`
+        if (!data.age){
+            age.textContent = "No age found";
+        }else{
+            age.textContent = "Age: " + `${data.age}`
+        }
         return data
     }
     catch(error){
@@ -85,11 +93,14 @@ async function addNationality() {
             flagDiv.removeChild(flagDiv.firstChild)
         }
         for (let i = 0; i < data.country.length; i++){
-            const flagIcon = new Image(40,40);
+            const flagIcon = new Image(60,60);
             flagIcon.classList.add("flag-icon")
             flagIcon.src = `images/flags/${data.country[i]["country_id"]}.svg`
             flagDiv.appendChild(flagIcon);
-        } 
+        }
+        if (!flagDiv.firstChild){
+            flagDiv.textContent = "Citizen of the world"
+        }
         return data
     }catch(error){
         console.log("ERROR: ", error)

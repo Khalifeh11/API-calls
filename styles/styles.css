@@ -1,8 +1,14 @@
+.card{
+    margin: 10rem auto 10rem auto ;
+    border: 1px solid black;
+    border-radius: 12px;
+    width: 50%;
+}
+
 #random-img{
-    margin-left: auto;
-    margin-right: auto;
+    margin: 1rem auto 1rem auto;
     display: block;
-    width: 15rem;;
+    width: 50%;
     border-radius: 8px  ;
 }
 
@@ -17,10 +23,29 @@ form{
 }
 .information{
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
 }
+
+label{
+    font-family: 'Montserrat', sans-serif;
+}
+
+#btn{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.horizontal-line{
+    width: 30%;
+}
+
 .flag-icon{
     margin: 1rem;
     border-radius: 12px;
+    border: 1px solid rgb(53, 48, 48);
+}
+
+.flag-div{
+    margin: 1rem;
 }
 
 
