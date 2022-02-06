@@ -49,10 +49,12 @@ async function addGender() {
     try{
     const response = await fetch(`https://api.genderize.io?name=${nameInput.value}`);
     const data = await response.json();
+    let uppercaseGender = data.gender.toUpperCase();
+    console.log(uppercaseGender)
     if (!data.gender){
         gender.textContent = "Is that a real name?";
     }else{
-        gender.textContent = "Gender: " + `${data.gender}` 
+        gender.textContent = "Gender: " + `${uppercaseGender}` 
     }
     return data
     }catch(error){

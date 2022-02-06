@@ -1,19 +1,20 @@
 .title{
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lobster', cursive;
 }
 .card{
     margin: 2rem auto 10rem auto ;
     border: 1px solid black;
     border-radius: 12px;
     width: 50%;
+    background-color: antiquewhite;
 }
 
 #random-img{
     margin: 1rem auto 1rem auto;
     display: block;
     width: 50%;
-    border-radius: 8px  ;
+    border-radius: 8px;
 }
 
 .title{
@@ -27,17 +28,18 @@ form{
 }
 .information{
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lobster', cursive;
 }
 
 label{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lobster', cursive;
+    font-weight: bold;
+    font-size: larger;
 }
 
 #btn{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lobster', cursive;
 }
-
 .horizontal-line{
     width: 30%;
 }
@@ -45,7 +47,6 @@ label{
 .flag-icon{
     margin: 1rem;
     border-radius: 12px;
-    border: 1px solid rgb(53, 48, 48);
 }
 
 .flag-div{
