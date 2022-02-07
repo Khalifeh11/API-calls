@@ -13,7 +13,7 @@ body{
     margin: auto;
     border: 1px solid black;
     border-radius: 12px;
-    /* background-color: rgb(224, 213, 213); */
+    background-color: rgb(224, 213, 213);
 }
 
 .card-content{
@@ -97,11 +97,16 @@ body{
     border-radius: 12px;
 }
 figcaption{
-    text-align:center;
+    align-self: flex-end;
+    margin-top: 4.5rem;
+    margin-left: -4.4rem;
+    margin-right: 1rem;
 }
 
 .flag-div{
     margin: 1rem;
+    display: flex;
+    justify-content: center;
 }
 
 @media only screen and (max-width: 600px) {
