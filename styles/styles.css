@@ -98,6 +98,7 @@ body{
 }
 figcaption{
     align-self: flex-end;
+    padding-top: 5px;
     margin-top: 4.5rem;
     margin-left: -4.4rem;
     margin-right: 1rem;
@@ -116,7 +117,8 @@ figcaption{
 
     .card {
     margin: 10rem auto;
-  } 
+  }
+
 
 }
 

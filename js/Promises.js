@@ -1,3 +1,5 @@
+
+
 const img = document.querySelector('img');
 async function getRandomImg ()  {
     try{
@@ -74,9 +76,6 @@ async function addAge() {
 const countryName = new Intl.DisplayNames(
     ['en'], {type: 'region'}
   );
-
-
-
 
 
 const flagDiv = document.querySelector(".flag-div")
